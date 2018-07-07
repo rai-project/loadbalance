@@ -226,7 +226,8 @@
 [[projects]]
   name = "github.com/ugorji/go"
   packages = ["codec"]
-  revision = "bdcc60b419d136a85cdf2e7cbcac34b3f1cd6e57"
+  revision = "b4c50a2b199d93b13dc15e78929cfb23bfdf21ab"
+  version = "v1.1.1"
 
 [[projects]]
   branch = "master"
@@ -254,6 +255,12 @@
     "ssh/terminal"
   ]
   revision = "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sync"
+  packages = ["syncmap"]
+  revision = "1d60e4601c6fd243af51cc01ddf169918a5407ca"
 
 [[projects]]
   branch = "master"
@@ -286,6 +293,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "10f93b235e8d1ee9a56f89d239303c9e8a3a39080b4820d4601dbf43ee157851"
+  inputs-digest = "309794ab09930ce5d62844a990337ec22cd5ac58a960f4b4b0e0997609627b91"
   solver-name = "gps-cdcl"
   solver-version = 1
