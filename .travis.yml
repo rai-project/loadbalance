@@ -7,17 +7,13 @@ matrix:
     - go: tip
 dist: trusty
 sudo: false
-addons:
-  apt:
-    sources:
-    - sourceline: ppa:masterminds/glide
-    packages:
-    - glide
+before_install:
+- curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 install:
-  - glide install --force
-  - rm -fr vendor/github.com/Sirupsen
-  - find vendor -type f -exec sed -i 's/Sirupsen/sirupsen/g' {} +
-  - go build
+- dep ensure -v
+- rm -fr vendor/github.com/Sirupsen
+- find vendor -type f -exec sed -i 's/Sirupsen/sirupsen/g' {} +
+- go build
 script:
   - echo "Skip tests..."
 after_script:
