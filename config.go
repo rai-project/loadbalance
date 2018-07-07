@@ -43,16 +43,16 @@ func (a *loadbalanceConfig) Read() {
 	}
 }
 
-func (c loadbalanceConfig) Wait() {
-	<-c.done
+func (a loadbalanceConfig) Wait() {
+	<-a.done
 }
 
-func (c *loadbalanceConfig) String() string {
-	return pp.Sprintln(c)
+func (a *loadbalanceConfig) String() string {
+	return pp.Sprintln(a)
 }
 
-func (c *loadbalanceConfig) Debug() {
-	log.Debug("S3 Config = ", c)
+func (a *loadbalanceConfig) Debug() {
+	log.Debug("S3 Config = ", a)
 }
 
 func init() {
